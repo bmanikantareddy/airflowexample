@@ -182,8 +182,6 @@ def create_dag(dag_id, config):
         if len(data) == 0:
             remoteexists = False
 
-        smokeexists = kwargs['dag_run'].conf.get('smokeexists', False)
-        remoteexists = kwargs['dag_run'].conf.get('remoteexists', False)
         print("smokeexists:",smokeexists)
         print("remoteexists:",remoteexists)
         if smokeexists and remoteexists:
